@@ -15,7 +15,7 @@ class TrafficSeries extends Component {
 
     
     componentDidMount() {
-        fetch("http://localhost:8080/api/traffic?period=240")
+        fetch(process.env.REACT_APP_BACKEND_URL + "/api/traffic?period=240")
             .then(res => res.json())
             .then(
                   (result) => {
